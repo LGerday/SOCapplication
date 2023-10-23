@@ -1,0 +1,24 @@
+﻿<Application
+    x:Class="soc.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ViewModel="clr-namespace:soc.ViewModel"
+    xmlns:local="clr-namespace:soc"
+    xmlns:view="clr-namespace:soc.View">
+    <Application.Resources>
+
+        <DataTemplate DataType="{x:Type ViewModel:MainViewModel}">
+            <view:Home />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ViewModel:ServerViewModel}">
+            <view:ServerView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ViewModel:AddServerViewModel}">
+            <view:AddServerView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ViewModel:SettingsViewModel}">
+            <view:SettingsView />
+        </DataTemplate>
+    </Application.Resources>
+
+</Application>
